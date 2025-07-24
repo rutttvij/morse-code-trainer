@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morse Code Trainer</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="welcome">
+  <h1>Morse Code Trainer</h1>
+  <label>Are you ready?</label>
+  <button id="beginButton" onclick="showMorseDictionary()">Let's Begin</button>
+</div>
+
+<div id="training" style="display: none;">
+  <h1>Morse Code Trainer</h1>
+  <label id="wordLabel">Word:</label>
+  <input type="text" id="entry">
+  <div id="buttonContainer">
+    <button id="newWordButton" onclick="showNewWord()">New Word</button>
+    <button id="submitButton" onclick="checkAnswer()">Submit</button>
+    <button id="hintButton" onclick="showHint()">Hint</button>
+    <button id="exitButton" onclick="exitTraining()">Exit</button> 
+  </div>
+  <p id="resultLabel"></p>
+</div>
+
+<div id="morseDict" style="display: none;">
+  <h1>Morse Code Dictionary</h1>
+  <div id="morseDictContent" class="columns"></div>
+  <button id="continueButton" onclick="beginTraining()">Continue</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
